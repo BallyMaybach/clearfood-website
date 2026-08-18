@@ -4,14 +4,15 @@ Marketing landing page for Clear Food (iOS food scanner). Plain HTML/CSS/JS — 
 
 ## Structure
 
-- `index.html` — the whole page
-- `styles.css` — design tokens mirror the app's light palette (`Clear-Food-App/lib/theme.js`)
-- `script.js` — scroll-reveal for feature cards, no dependencies
+- `index.html` — the whole page (nav → hero → reviews → footer)
+- `styles.css` — design tokens mirror the app's light palette (`Clear-Food-App/lib/theme.js`); the reviews section deliberately breaks to the app's dark palette for contrast
+- `script.js` — hold-to-open interaction for the download CTAs (nav mobile + hero), no dependencies
 - `assets/` — real app icon + hero mockup already in place, see `assets/README.md`
+
+App Store link is live: `https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653`. Reviews in the "What users say about us" section are real ASC customer reviews (verbatim, incl. typos) — refresh via `node scripts/asc.mjs GET /v1/apps/6779364653/customerReviews --all` in the Clear-Food-App repo if new ones come in.
 
 ## Still needed before launch
 
-- [ ] Real App Store URL (three `href="#"` placeholders in `index.html`, marked `TODO`)
 - [ ] `assets/og-image.png` — 1200×630 social preview card
 - [ ] Final copy review (current copy is a first draft grounded in the app's actual features/thesis, not yet reviewed)
 
