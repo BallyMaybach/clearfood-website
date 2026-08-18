@@ -6,15 +6,14 @@
   <title>Clear Food — See the cause, not the symptom</title>
   <meta name="description" content="Clear Food scores your food 1–100 and shows exactly why. Snap a photo and see what's really behind breakouts, bloating, and puffy mornings." />
 
-  <!-- Open Graph / social preview. Swap assets/og-image.png for a real 1200×630 export. -->
   <meta property="og:title" content="Clear Food — See the cause, not the symptom" />
   <meta property="og:description" content="Snap a photo. Get a score. See why." />
   <meta property="og:image" content="/assets/og-image.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- TODO: drop a real favicon at assets/favicon.png (derived from the app icon) -->
   <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/icon-180.png" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -23,15 +22,19 @@
   <nav class="nav">
     <div class="wrap">
       <a href="#" class="logo">
-        <span class="logo-mark" aria-hidden="true"></span>
+        <img src="assets/icon-default-1024.png" alt="" />
         Clear Food
       </a>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#cause">Why it works</a>
-        <!-- TODO: replace # with the real App Store URL once available -->
-        <a href="#" class="nav-cta">Get the app</a>
-      </div>
+      <!-- TODO: replace # with the real App Store URL -->
+      <a href="#" class="apple-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M16.365 1.43c0 1.14-.462 2.24-1.19 3.033-.804.87-2.11 1.55-3.19 1.46-.15-1.09.417-2.24 1.14-2.99.81-.86 2.22-1.5 3.24-1.5zM20.5 17.31c-.55 1.26-.81 1.82-1.52 2.94-.99 1.56-2.38 3.5-4.11 3.51-1.53.02-1.93-.99-4.01-.98-2.08.01-2.52 1-4.05.98-1.73-.02-3.05-1.77-4.04-3.32C.3 17.14-.63 12.9.98 10.05c.86-1.53 2.4-2.5 4.06-2.52 1.55-.03 2.7.99 3.98.99 1.29 0 2.71-1.23 4.57-1.05.78.03 2.97.31 4.38 2.36-.11.07-2.62 1.53-2.6 4.57.03 3.63 3.18 4.84 3.13 4.9z"/>
+        </svg>
+        <span class="badge-text">
+          <span class="badge-eyebrow">Download on the</span>
+          <span class="badge-title">App Store</span>
+        </span>
+      </a>
     </div>
   </nav>
 
@@ -39,43 +42,30 @@
     <div class="wrap">
       <div class="hero-copy">
         <span class="eyebrow">iOS · AI food scanner</span>
-        <h1>Your skin knows<br />what you ate.</h1>
+        <h1>Meet Clear Food<br />Scan your food,<br />see the cause.</h1>
         <p class="lede">
-          Clear Food scores your food 1–100 and shows exactly why —
-          so breakouts, bloating, and puffy mornings stop being a mystery.
+          Meet Clear Food, the AI-powered app that shows what your food is
+          really doing to your skin and body. Snap a photo and get an
+          instant 1–100 score, a breakdown of why, and the one ingredient
+          behind it.
         </p>
         <div class="cta-row">
           <!-- TODO: replace # with the real App Store URL -->
-          <a href="#" class="store-badge">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <a href="#" class="apple-badge large">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M16.365 1.43c0 1.14-.462 2.24-1.19 3.033-.804.87-2.11 1.55-3.19 1.46-.15-1.09.417-2.24 1.14-2.99.81-.86 2.22-1.5 3.24-1.5zM20.5 17.31c-.55 1.26-.81 1.82-1.52 2.94-.99 1.56-2.38 3.5-4.11 3.51-1.53.02-1.93-.99-4.01-.98-2.08.01-2.52 1-4.05.98-1.73-.02-3.05-1.77-4.04-3.32C.3 17.14-.63 12.9.98 10.05c.86-1.53 2.4-2.5 4.06-2.52 1.55-.03 2.7.99 3.98.99 1.29 0 2.71-1.23 4.57-1.05.78.03 2.97.31 4.38 2.36-.11.07-2.62 1.53-2.6 4.57.03 3.63 3.18 4.84 3.13 4.9z"/>
             </svg>
-            Download on the App Store
+            <span class="badge-text">
+              <span class="badge-eyebrow">Download on the</span>
+              <span class="badge-title">App Store</span>
+            </span>
           </a>
         </div>
         <p class="cta-note">3-day free trial, then a yearly plan.</p>
       </div>
 
       <div class="hero-visual">
-        <div class="phone-slot">
-          <!-- TODO: replace with <img src="assets/hero-mockup.png" alt="Clear Food scan result"> once a real screenshot is ready -->
-          <div class="placeholder-label">
-            Drop a scan-result screenshot at<br /><code>assets/hero-mockup.png</code>
-          </div>
-        </div>
-        <div class="score-float" aria-hidden="true">
-          <div class="ring-wrap">
-            <svg viewBox="0 0 52 52">
-              <circle class="ring-track" cx="26" cy="26" r="22.5" stroke-width="5" />
-              <circle class="ring-value" id="heroRing" cx="26" cy="26" r="22.5" stroke-width="5" />
-            </svg>
-            <div class="ring-number">86</div>
-          </div>
-          <div>
-            <div class="food-name">Greek yogurt bowl</div>
-            <div class="food-note">Why: high protein</div>
-          </div>
-        </div>
+        <img src="assets/hero-mockup.jpg" alt="Clear Food scan results: a hard-boiled egg scoring 86, Good, and a Snickers bar scoring 30, Bad, each showing goal scores and macros." />
       </div>
     </div>
   </header>
@@ -139,11 +129,14 @@
       <p class="lede">Free to try. Takes one photo.</p>
       <div class="cta-row">
         <!-- TODO: replace # with the real App Store URL -->
-        <a href="#" class="store-badge">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <a href="#" class="apple-badge large">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M16.365 1.43c0 1.14-.462 2.24-1.19 3.033-.804.87-2.11 1.55-3.19 1.46-.15-1.09.417-2.24 1.14-2.99.81-.86 2.22-1.5 3.24-1.5zM20.5 17.31c-.55 1.26-.81 1.82-1.52 2.94-.99 1.56-2.38 3.5-4.11 3.51-1.53.02-1.93-.99-4.01-.98-2.08.01-2.52 1-4.05.98-1.73-.02-3.05-1.77-4.04-3.32C.3 17.14-.63 12.9.98 10.05c.86-1.53 2.4-2.5 4.06-2.52 1.55-.03 2.7.99 3.98.99 1.29 0 2.71-1.23 4.57-1.05.78.03 2.97.31 4.38 2.36-.11.07-2.62 1.53-2.6 4.57.03 3.63 3.18 4.84 3.13 4.9z"/>
           </svg>
-          Download on the App Store
+          <span class="badge-text">
+            <span class="badge-eyebrow">Download on the</span>
+            <span class="badge-title">App Store</span>
+          </span>
         </a>
       </div>
     </div>
