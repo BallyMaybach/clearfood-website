@@ -318,7 +318,8 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  background: #3A3937;
+  color: #F4F1EA;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 15px;
@@ -398,7 +399,7 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-copy { padding-bottom: 0; }
+  .hero-copy { padding-bottom: 48px; }
   .hero-visual { order: -1; margin-bottom: 8px; }
   .hero-visual img { max-width: 340px; }
   .hero p.lede { max-width: 100%; }
