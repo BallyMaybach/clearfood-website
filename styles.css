@@ -107,6 +107,35 @@ a { color: inherit; text-decoration: none; }
 
 .badge-img.small { height: 38px; }
 
+.nav-cta-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.08s ease, opacity 0.15s ease;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.nav-cta-mobile.pressing { transform: scale(0.96); opacity: 0.82; }
+
+.nav-cta-title {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.nav-cta-hint {
+  font-size: 9.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* -------------------- Hero -------------------- */
 
 .hero {
@@ -161,46 +190,41 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 32px;
 }
 
-.cta-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.cta-note {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 14px 0 0;
-}
-
-/* ---- Shortcuts-style "hold to open" row ---- */
+/* ---- Shortcuts-style "hold to open" row — primary hero CTA ---- */
 
 .shortcut-row {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   max-width: 100%;
-  margin-top: 18px;
-  padding: 10px 16px;
-  border-radius: 16px;
-  background: var(--surface-alt);
-  transition: transform 0.08s ease, background 0.15s ease;
+  margin-top: 4px;
+  padding: 14px 20px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 12px 28px -14px rgba(0, 0, 0, 0.16);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
 }
 
+.shortcut-row:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 16px 32px -14px rgba(0, 0, 0, 0.22);
+  transform: translateY(-1px);
+}
+
 .shortcut-row.pressing {
-  background: var(--border-strong);
+  background: var(--surface-alt);
   transform: scale(0.98);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .shortcut-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   overflow: hidden;
   flex: none;
 }
@@ -209,19 +233,21 @@ a { color: inherit; text-decoration: none; }
 
 .shortcut-text {
   display: flex;
-  align-items: baseline;
-  gap: 6px;
-  font-size: 15px;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 17px;
   white-space: nowrap;
 }
 
 .shortcut-title {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
 
 .shortcut-sub {
   color: var(--muted);
+  font-size: 13px;
   white-space: nowrap;
 }
 
@@ -229,7 +255,7 @@ a { color: inherit; text-decoration: none; }
   flex: none;
   color: var(--muted);
   display: flex;
-  margin-left: 4px;
+  margin-left: 6px;
 }
 
 /* ---- hero visual: real device mockup ---- */
@@ -312,4 +338,6 @@ a:focus-visible, button:focus-visible {
   .hero-visual img { max-width: 340px; }
   .hero p.lede { max-width: 100%; }
   .footer-top { flex-direction: column; gap: 32px; }
+  .nav-cta-desktop { display: none; }
+  .nav-cta-mobile { display: flex; }
 }
