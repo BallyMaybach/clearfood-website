@@ -1,3 +1,23 @@
+// Referral click tracking — only fires on pages opened via /marvin, /jenna
+// etc. (api/l/[slug].js tags the page with window.__CF_REF). Uses
+// sendBeacon so it doesn't race the navigation away from the page.
+function trackDownloadClick() {
+  var ref = window.__CF_REF;
+  if (!ref) return;
+  var payload = JSON.stringify({ slug: ref, type: "click" });
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon("/api/track", new Blob([payload], { type: "application/json" }));
+  } else {
+    fetch("/api/track", { method: "POST", body: payload, keepalive: true });
+  }
+}
+
+document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (link) {
+  if (!link.hasAttribute("data-hold-link")) {
+    link.addEventListener("click", trackDownloadClick);
+  }
+});
+
 // "Hold to open" row — mirrors an iOS Shortcuts Home Screen bookmark:
 // a plain tap does nothing, only a sustained press navigates.
 (function () {
@@ -10,6 +30,7 @@
       link.classList.add("pressing");
       timer = setTimeout(function () {
         link.classList.remove("pressing");
+        trackDownloadClick();
         window.location.href = link.href;
       }, HOLD_MS);
     }

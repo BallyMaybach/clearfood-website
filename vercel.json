@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/:slug([a-zA-Z0-9-]+)", "destination": "/api/l/:slug" }
+  ]
+}

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Clear Food — Referral Links</title>
+  <style>
+    :root {
+      --bg: #1F1E1D;
+      --surface: #262624;
+      --elevated: #30302E;
+      --muted: #8D897F;
+      --accent: #F4F1EA;
+      --on-accent: #1F1E1D;
+      --border: rgba(244, 241, 234, 0.1);
+      --good: #3DAF7A;
+      --font: -apple-system, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--accent);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 80px; }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    .sub { color: var(--muted); font-size: 14px; margin: 0 0 32px; }
+
+    #gate {
+      display: flex; flex-direction: column; gap: 12px;
+      max-width: 320px; margin: 80px auto;
+    }
+    #gate input {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; color: var(--accent); padding: 12px 14px;
+      font-size: 15px; font-family: var(--font);
+    }
+    #gate button, .refresh {
+      background: var(--accent); color: var(--on-accent); border: none;
+      border-radius: 100px; padding: 12px 16px; font-size: 15px; font-weight: 600;
+      cursor: pointer; font-family: var(--font);
+    }
+    #gate .err { color: #E5766B; font-size: 13px; min-height: 16px; }
+
+    #dashboard { display: none; }
+    .toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; gap: 12px; flex-wrap: wrap; }
+    .toolbar-right { display: flex; gap: 10px; align-items: center; }
+    .refresh { padding: 8px 16px; font-size: 13px; }
+    .add-link { display: flex; gap: 8px; }
+    .add-link input {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 100px; color: var(--accent); padding: 8px 14px;
+      font-size: 13px; font-family: var(--font); width: 140px;
+    }
+    .add-link button {
+      background: var(--elevated); color: var(--accent); border: 1px solid var(--border);
+      border-radius: 100px; padding: 8px 14px; font-size: 13px; cursor: pointer; font-family: var(--font);
+    }
+
+    table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: 16px; overflow: hidden; }
+    th, td { text-align: left; padding: 14px 16px; font-size: 14px; }
+    th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid var(--border); }
+    tbody tr:not(:last-child) td { border-bottom: 1px solid var(--border); }
+    td.num { font-variant-numeric: tabular-nums; }
+    td.link a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--border); }
+    td.link a:hover { border-bottom-color: var(--accent); }
+    .ctr { color: var(--good); }
+    .empty { color: var(--muted); font-size: 14px; padding: 40px 0; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div id="gate">
+    <h1 style="text-align:center">Clear Food Admin</h1>
+    <input type="password" id="key-input" placeholder="Admin key" autofocus />
+    <button id="key-submit">Enter</button>
+    <div class="err" id="key-err"></div>
+  </div>
+
+  <div class="wrap" id="dashboard">
+    <h1>Referral Links</h1>
+    <p class="sub">clearfood.app/&lt;name&gt; — visits and downloads per link.</p>
+
+    <div class="toolbar">
+      <div class="add-link">
+        <input type="text" id="new-slug" placeholder="new-name" />
+        <button id="add-slug">Add link</button>
+      </div>
+      <div class="toolbar-right">
+        <button class="refresh" id="refresh">Refresh</button>
+      </div>
+    </div>
+
+    <table id="table" style="display:none">
+      <thead>
+        <tr><th>Link</th><th>Visits</th><th>Clicks</th><th>CTR</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" style="display:none">No links tracked yet.</div>
+  </div>
+
+  <script>
+    (function () {
+      var gate = document.getElementById("gate");
+      var dashboard = document.getElementById("dashboard");
+      var keyInput = document.getElementById("key-input");
+      var keyErr = document.getElementById("key-err");
+
+      function getKey() { return sessionStorage.getItem("cf_admin_key"); }
+
+      async function load() {
+        var key = getKey();
+        var res = await fetch("/api/stats?key=" + encodeURIComponent(key));
+        if (res.status === 401) {
+          sessionStorage.removeItem("cf_admin_key");
+          gate.style.display = "flex";
+          dashboard.style.display = "none";
+          keyErr.textContent = "Wrong key.";
+          return;
+        }
+        var data = await res.json();
+        render(data.links || []);
+      }
+
+      function render(links) {
+        var rows = document.getElementById("rows");
+        var table = document.getElementById("table");
+        var empty = document.getElementById("empty");
+        rows.innerHTML = "";
+
+        if (!links.length) {
+          table.style.display = "none";
+          empty.style.display = "block";
+          return;
+        }
+        table.style.display = "table";
+        empty.style.display = "none";
+
+        links.forEach(function (l) {
+          var ctr = l.visits ? Math.round((l.clicks / l.visits) * 100) : 0;
+          var tr = document.createElement("tr");
+          tr.innerHTML =
+            '<td class="link"><a href="https://clearfood.app/' + l.slug + '" target="_blank">/' + l.slug + "</a></td>" +
+            '<td class="num">' + l.visits + "</td>" +
+            '<td class="num">' + l.clicks + "</td>" +
+            '<td class="num ctr">' + ctr + "%</td>";
+          rows.appendChild(tr);
+        });
+      }
+
+      function enter() {
+        var val = keyInput.value.trim();
+        if (!val) return;
+        sessionStorage.setItem("cf_admin_key", val);
+        keyErr.textContent = "";
+        gate.style.display = "none";
+        dashboard.style.display = "block";
+        load();
+      }
+
+      document.getElementById("key-submit").addEventListener("click", enter);
+      keyInput.addEventListener("keydown", function (e) { if (e.key === "Enter") enter(); });
+      document.getElementById("refresh").addEventListener("click", load);
+      document.getElementById("add-slug").addEventListener("click", function () {
+        var slug = document.getElementById("new-slug").value.trim().toLowerCase();
+        if (!/^[a-z0-9-]{1,40}$/.test(slug)) return;
+        window.open("https://clearfood.app/" + slug, "_blank");
+        document.getElementById("new-slug").value = "";
+      });
+
+      if (getKey()) {
+        gate.style.display = "none";
+        dashboard.style.display = "block";
+        load();
+      }
+    })();
+  </script>
+</body>
+</html>
