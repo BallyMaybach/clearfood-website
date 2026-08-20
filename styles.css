@@ -107,6 +107,27 @@ a { color: inherit; text-decoration: none; }
 
 .badge-img.small { height: 38px; }
 
+.badge-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  transition: transform 0.08s ease, opacity 0.15s ease;
+}
+
+.badge-link.pressing { transform: scale(0.96); opacity: 0.82; }
+
+.badge-link .badge-img:hover { transform: none; opacity: 1; }
+
+.badge-hint {
+  font-size: 11px;
+  color: var(--muted);
+}
+
 .nav-cta-mobile {
   display: none;
   flex-direction: column;
