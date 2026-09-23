@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/content", "destination": "https://clear-food-factory.netlify.app/" },
     { "source": "/:slug([a-zA-Z0-9-]+)", "destination": "/api/l/:slug" }
   ]
 }
