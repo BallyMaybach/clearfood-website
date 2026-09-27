@@ -79,3 +79,22 @@ dialog{color:#17212e;background:linear-gradient(145deg,#fffffff5,#eff4f9f5);back
 #onboarding .result-actions .store-button.ios{background:linear-gradient(140deg,#3dd868,#34C759);border-color:#34C759;color:#fff;box-shadow:0 7px 18px -10px #1a7a3280}
 #onboarding .result-actions .store-button.ios:hover{background:linear-gradient(140deg,#4ae374,#3dd868);transform:translateY(-1px)}
 @media(max-width:760px){#onboarding{padding:20px 20px 16px;width:min(510px,calc(100% - 20px))}#onboarding .progress-track{margin:14px 0 16px}#onboarding h2{font-size:1.6rem;margin:10px 0}#onboarding .choices{gap:6px;margin-top:14px}#onboarding .choice{padding:11px 12px}#onboarding .choice input[type="checkbox"],#onboarding .choice input[type="radio"]{width:20px;height:20px}#onboarding .choice strong{font-size:.82rem}#onboarding .choice small{font-size:.72rem}#onboarding .result-offer{padding:13px 15px}#onboarding .dialog-bottom{margin-top:20px}}
+
+/* Android waitlist — status, spot number, invite link */
+#waitlist-status{font-size:.75rem;line-height:1.5;color:#ffd7d2;margin:12px 0 0;min-height:0}
+#waitlist-status:empty{display:none}
+#waitlist .waitlist-submit:disabled{opacity:.7;cursor:progress;transform:none}
+#waitlist .wl-kicker{font-family:var(--mono);font-size:.625rem;letter-spacing:.14em;color:#dfebf6;margin:0 0 8px}
+#waitlist .wl-place{font-size:4rem;font-weight:600;letter-spacing:-.05em;line-height:1;color:#fff;margin:6px 0 14px;font-variant-numeric:tabular-nums}
+#waitlist .wl-place span{font-size:2rem;opacity:.6;margin-right:2px;vertical-align:.55em}
+#waitlist .wl-share{margin-top:18px;padding:15px;border-radius:18px;background:#ffffff10;border:1px solid #ffffff26;box-shadow:inset 0 1px 0 #ffffff1c}
+#waitlist .wl-share>strong{font-size:.9375rem;font-weight:600;color:#fff}
+#waitlist .wl-share>p{font-size:.8125rem;color:#dfeaf4;margin:2px 0 11px;line-height:1.5}
+#waitlist .wl-invited{color:#fff;font-weight:600}
+#waitlist .wl-link{display:flex;gap:6px;align-items:center;background:#0f28431f;border:1px solid #ffffff33;border-radius:12px;padding:4px 4px 4px 12px}
+#waitlist .wl-link input{flex:1;min-width:0;background:none;border:0;color:#fff;font-size:.8125rem;height:34px;padding:0;text-overflow:ellipsis}
+#waitlist .wl-link input:focus{outline:none}
+#waitlist .wl-link button{flex-shrink:0;border:0;border-radius:9px;background:#fff;color:#18354f;font-size:.75rem;font-weight:600;padding:0 12px;height:34px}
+#waitlist .wl-native{display:block;width:100%;margin-top:9px;background:none;border:1px solid #ffffff40;border-radius:99px;color:#fff;font-size:.8125rem;font-weight:500;min-height:40px}
+#waitlist .wl-reset{display:block;margin:12px auto 0;background:none;border:0;color:#cedeea;font-size:.6875rem;text-decoration:underline;text-underline-offset:3px;padding:6px}
+.is-android .store-actions a.ios{display:none}

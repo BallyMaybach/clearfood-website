@@ -29,6 +29,8 @@ document.addEventListener("click", function (e) {
     var triggeredByHold = false;
 
     function start() {
+      // Android gets the waitlist instead of the App Store (app.js).
+      if (document.documentElement.classList.contains("is-android")) return;
       link.classList.add("pressing");
       timer = setTimeout(function () {
         triggeredByHold = true;
