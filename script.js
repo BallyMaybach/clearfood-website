@@ -14,7 +14,7 @@ function trackDownloadClick() {
 
 // Delegated so links rendered later (onboarding result) are counted too.
 document.addEventListener("click", function (e) {
-  var link = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+  var link = e.target.closest && e.target.closest('a[href*="apps.apple.com"]:not(.reviews-link)');
   if (link && !link.hasAttribute("data-hold-link")) trackDownloadClick();
 });
 

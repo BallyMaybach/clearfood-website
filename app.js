@@ -119,7 +119,7 @@ if(isAndroid){
   document.querySelector('.nav-cta').textContent='Join the waitlist';
   const heroAndroid=document.querySelector('.store-actions .android');
   heroAndroid.classList.add('ios');heroAndroid.querySelector('span').innerHTML='<small>COMING SOON</small>Join the Android waitlist';
-  document.addEventListener('click',event=>{const link=event.target.closest&&event.target.closest('a[href*="apps.apple.com"]');if(!link)return;event.preventDefault();event.stopImmediatePropagation();if(onboarding.open)onboarding.close();openWaitlist();},true);
+  document.addEventListener('click',event=>{const link=event.target.closest&&event.target.closest('a[href*="apps.apple.com"]:not(.reviews-link)');if(!link)return;event.preventDefault();event.stopImmediatePropagation();if(onboarding.open)onboarding.close();openWaitlist();},true);
   if(invitedBy)addEventListener('load',()=>setTimeout(openWaitlist,600));
 }
 
@@ -181,8 +181,18 @@ menuButton.addEventListener('click',()=>{const opening=mobileMenu.hidden;mobileM
 mobileMenu.querySelectorAll('a,button').forEach(element=>element.addEventListener('click',closeMenu));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!mobileMenu.hidden){closeMenu();menuButton.focus();}});
 document.addEventListener('click',event=>{if(!event.target.closest('.nav-wrap'))closeMenu();});
-matchMedia('(min-width: 761px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
+matchMedia('(min-width: 1001px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
 const faqItems=document.querySelectorAll('.faq-list details');
 faqItems.forEach(item=>item.addEventListener('toggle',()=>{if(item.open)faqItems.forEach(other=>{if(other!==item)other.open=false;});}));
-document.querySelectorAll('a.brand[href="#"]').forEach(link=>{link.addEventListener('click',event=>{event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'',location.pathname+location.search);});});
+// Keep the home action in-page so fragment navigation cannot restore an old position.
+document.querySelectorAll('a.brand[href="#"],a.brand[href="#top"]').forEach(link=>{
+  link.addEventListener('click',event=>{
+    if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();
+    closeMenu();
+    history.replaceState(history.state,'',location.pathname+location.search);
+    document.querySelector('.nav .brand').focus({preventScroll:true});
+    window.scrollTo({top:0,behavior:reducedMotion.matches?'instant':'smooth'});
+  });
+});
 
