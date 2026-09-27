@@ -1,134 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clear Food — See the cause, not the symptom</title>
-  <meta name="description" content="Clear Food scores your food 1–100 and shows exactly why. Snap a photo and see what's really behind breakouts, bloating, and puffy mornings." />
-
-  <meta property="og:title" content="Clear Food — See the cause, not the symptom" />
-  <meta property="og:description" content="Snap a photo. Get a score. See why." />
-  <meta property="og:image" content="/assets/og-image.png" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/icon-180.png" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4e5d75"><meta name="description" content="Get to know your food with Clear Food. Snap a photo, explore your personal food score, and make everyday choices that fit your goals.">
+  <title>Clear Food — Know What's On Your Plate</title>
+  <link rel="icon" href="assets/clearfood-icon.png"><link rel="stylesheet" href="oasis.css"><script src="app.js" defer></script><script src="script.js" defer></script>
 </head>
 <body>
-
-  <nav class="nav">
-    <div class="wrap">
-      <a href="#" class="logo">
-        <img src="assets/icon-default-1024.png" alt="" />
-        Clear Food
-      </a>
-      <a href="https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653" class="nav-cta-desktop badge-link" data-hold-link aria-label="Download Clear Food. Press and hold to open.">
-        <img class="badge-img small" src="assets/app-store-badge.webp" alt="Download on the App Store" />
-        <span class="badge-hint">Hold to open</span>
-      </a>
-      <a href="https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653" class="nav-cta-mobile" data-hold-link aria-label="Download Clear Food. Press and hold to open.">
-        <span class="nav-cta-title">Download</span>
-        <span class="nav-cta-hint">(Hold to open)</span>
-      </a>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav-wrap"><nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#" aria-label="Clear Food home"><img src="assets/clearfood-icon.png" alt="" width="30" height="30"><span>Clear Food</span></a>
+    <div class="nav-links"><a href="#food-showcase">Explore</a><a href="#how-it-works">How it works</a><a href="#your-goals">Your goals</a><a href="#questions">FAQs</a></div>
+    <a class="nav-cta" href="https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653" target="_blank" rel="noopener">Get the app</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </nav><div id="mobile-menu" hidden><a href="#food-showcase">Explore your food</a><a href="#how-it-works">How it works</a><a href="#your-goals">Your goals</a><a href="#questions">FAQs</a><button data-waitlist>Join the Android waitlist</button></div></header>
+<main id="main">
+<div class="sky">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">Know What's On Your Plate</h1>
+    <p class="hero-copy">PERSONAL FOOD INSIGHTS. FOR YOUR SKIN, BODY &amp; GOALS.</p>
+    <div class="store-actions">
+      <button class="store-button android" data-waitlist><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m7 4-1-2 .8-.4L8 3.8a10 10 0 0 1 8 0l1.2-2.2.8.4-1 2a7 7 0 0 1 4 6H3a7 7 0 0 1 4-6ZM3 11h18v9H3zm4-5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m10 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg><span><small>COMING SOON</small>Android waitlist</span></button>
+      <a class="store-button ios" data-hold-link href="https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.1 12.3c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.2-2.7.8-3.4.8-.7 0-1.8-.8-3-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3.1-.7s1.9.7 3.1.7c1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.9-1.1-2.9-3.9M15 5.7c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3"/></svg><span><small>AVAILABLE ON iOS</small>Get the app</span></a>
     </div>
-  </nav>
-
-  <header class="hero">
-    <div class="wrap">
-      <div class="hero-copy">
-        <span class="rating-pill">
-          <span class="stars">★★★★★</span>
-          5.0 Rating
-        </span>
-        <h1>Meet Clear Food<br />Scan any food,<br />know what's inside.</h1>
-        <p class="lede">
-          Meet Clear Food, the app that shows what your food is really
-          doing to your skin and body. Snap a photo and get a
-          personalized score.
-        </p>
-        <a href="https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653" class="shortcut-row" data-hold-link aria-label="Download Clear Food. Press and hold to open.">
-          <span class="shortcut-icon"><img src="assets/icon-180.png" alt="" /></span>
-          <span class="shortcut-text">
-            <span class="shortcut-title">Download Clear Food</span>
-            <span class="shortcut-sub">(Hold to open)</span>
-          </span>
-          <span class="shortcut-menu" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
-          </span>
-        </a>
-      </div>
-
-      <div class="hero-visual">
-        <img src="assets/hero-mockup.jpg" alt="Clear Food scan results: a hard-boiled egg scoring 86, Good, and a Snickers bar scoring 30, Bad, each showing goal scores and macros." />
-      </div>
-    </div>
-  </header>
-
-  <section class="reviews">
-    <div class="wrap">
-      <h2>What users say about us</h2>
-      <div class="review-grid">
-        <div class="review-card">
-          <div class="review-head">
-            <span class="review-avatar">E</span>
-            <span class="review-name">Emmon12</span>
-          </div>
-          <p class="review-body">"i tried loosing weight with this app and it actually worked.. it took a lot of discipline but the calorie tracking really helped! Clear recommendation!"</p>
-        </div>
-        <div class="review-card">
-          <div class="review-head">
-            <span class="review-avatar">H</span>
-            <span class="review-name">HeisenbergSigma</span>
-          </div>
-          <p class="review-body">"I waited for excactly this App… I have no Acne anymore :)"</p>
-        </div>
-        <div class="review-card">
-          <div class="review-head">
-            <span class="review-avatar">S</span>
-            <span class="review-name">Staszek11111</span>
-          </div>
-          <p class="review-body">"Yes i is very good for bloated face and body fat."</p>
-        </div>
-        <div class="review-card">
-          <div class="review-head">
-            <span class="review-avatar">A</span>
-            <span class="review-name">AlmondDaughterSkincare</span>
-          </div>
-          <p class="review-body">"The Scan is very accurate"</p>
-        </div>
-      </div>
+    <p class="early-note">Android is coming. Join now for <strong>1 month free</strong> at launch.</p>
+    <div class="onboard-entry"><button class="button-3d" data-onboard>Get started <span aria-hidden="true">→</span></button><p>Find your food fit in a few taps.</p></div>
+  </section>
+  <section class="food-showcase" id="food-showcase" aria-label="Explore food insights" aria-roledescription="carousel">
+    <div class="showcase-sticky">
+      <div class="food-heading"><p class="eyebrow">A LITTLE CLARITY IN EVERY BITE</p><h2 id="food-name">The everyday<br> green bowl.</h2></div>
+      <div class="product-glass"><div class="product-label"><span id="food-label">Avocado &amp; quinoa bowl</span><span>PERSONAL SCORE <strong id="food-score">92<small>/100</small></strong></span></div><div class="scan-line" aria-hidden="true"></div></div>
+      <img id="hero-food" class="food-cutout" src="assets/bowl-cutout.png" alt="A fresh avocado and quinoa bowl" width="1254" height="1254" fetchpriority="high">
+      <div class="food-description"><p id="food-description"><strong>Food is personal.</strong> Go beyond the ingredients and see how your everyday choices fit your goals.</p><p class="sample-label">Illustrative scan · Not a nutritional assessment</p></div>
+      <div class="nutrient-glass"><div class="nutrient-top"><span id="insight-title">YOUR FOOD, DECODED</span><span id="insight-value">ONE PHOTO. MORE CLARITY.</span></div><div class="scan-bars" aria-hidden="true"></div><p id="insight-copy">A personal score, goal insights and macros. All in one place.</p></div>
+      <button class="carousel-arrow previous" aria-label="Previous food">‹</button><button class="carousel-arrow following" aria-label="Next food">›</button>
+      <div class="food-picker" aria-label="Choose a food"><button class="food-dot active" data-food="0" aria-label="Show avocado bowl" aria-pressed="true"><span></span></button><button class="food-dot" data-food="1" aria-label="Show hard-boiled egg" aria-pressed="false"><span></span></button></div>
+      <p class="scroll-caption">SCROLL TO SEE THE BIGGER PICTURE <span aria-hidden="true">↓</span></p>
+      <span class="sr-only" id="food-announcement" aria-live="polite"></span>
     </div>
   </section>
+</div>
+<section class="how section" id="how-it-works" aria-labelledby="how-title"><div class="section-heading"><div><p class="eyebrow">LESS GUESSWORK. MORE KNOW-HOW.</p><h2 id="how-title">Meet your food.<br>Understand your choices.</h2></div><p>Clear Food turns a quick photo into personal food insights. So your next choice feels a little simpler.</p></div>
+<div class="steps"><article><span class="step-number">01</span><div class="step-symbol" aria-hidden="true">⌗</div><h3>Snap your food.</h3><p>A meal, a snack, that thing in your fridge. Start with a photo.</p></article><article><span class="step-number">02</span><div class="step-symbol" aria-hidden="true">◎</div><h3>See the bigger picture.</h3><p>Explore a personal score, goal insights, calories and macros.</p></article><article><span class="step-number">03</span><div class="step-symbol" aria-hidden="true">↗</div><h3>Find what fits you.</h3><p>Discover alternatives and make choices around your own goals.</p></article></div></section>
+<section class="goals section" id="your-goals" aria-labelledby="goals-title"><div class="app-visual"><span class="visual-caption">A CLOSER LOOK AT CLEAR FOOD</span><img src="assets/app-preview.jpg" alt="Clear Food app: an egg scores 86 and a chocolate bar scores 30, with individual goal scores and macros" width="1000" height="1000" loading="lazy"><span class="app-caption">Actual app screens · Results vary by food and profile</span></div><div class="goals-copy"><p class="eyebrow">PERSONAL COMES FIRST.</p><h2 id="goals-title">Same food.<br>Different you.</h2><p>Your goals are your own. Your food insights should be, too.</p><div class="goal-tags"><span>✧ Clearer skin</span><span>◌ Less bloating</span><span>↗ Muscle growth</span><span>◎ Body composition</span></div><p class="goal-subcopy">Tell us what matters to you. We'll show you what a more personal food journey could look like.</p><button class="text-button" data-onboard>Let's find your food fit <span aria-hidden="true">↗</span></button></div></section>
+<section class="faq section" id="questions" aria-labelledby="faq-title"><div><p class="eyebrow">GOOD QUESTIONS.</p><h2 id="faq-title">A little more<br>clarity.</h2></div><div class="faq-list"><details><summary>What is Clear Food?<span aria-hidden="true">+</span></summary><p>Clear Food is a food-scanning app. Take a photo to explore a personalized food score, insights for your goals, calories, macros and food alternatives.</p></details><details><summary>Can I use Clear Food on Android?<span aria-hidden="true">+</span></summary><p>Not just yet. Join the Android waitlist to hear when it's ready. People who join before launch will get one month free in the app when the Android version is released.</p><button class="text-button" data-waitlist>Join the Android waitlist →</button></details><details><summary>What happens when I get started here?<span aria-hidden="true">+</span></summary><p>You'll try a short preview of our onboarding: choose your goals and preferences, then see your personal starting point. No account is needed. This preview doesn't create an app profile or sync your answers to the app.</p></details><details><summary>Is Clear Food medical advice?<span aria-hidden="true">+</span></summary><p>No. Clear Food provides food information to support everyday choices. Scores are estimates, not a diagnosis or a guarantee of health outcomes. For medical concerns, allergies or a prescribed diet, speak with a qualified healthcare professional.</p></details></div></section>
+<section class="closing"><p class="eyebrow">YOUR NEXT CHOICE STARTS HERE.</p><h2>A fresh perspective.<br>On every plate.</h2><button class="button-3d" data-onboard>Find your food fit <span aria-hidden="true">→</span></button><p>Curiosity looks good on you.</p></section>
+</main>
+<footer class="footer"><a class="brand" href="#"><img src="assets/clearfood-icon.png" alt="" width="28" height="28">clear food.</a><span>© 2026 Clear Food</span><div><a href="/privacy-policy">Privacy policy</a><a href="/terms">Terms of use</a></div><small>Team preview</small></footer>
+<dialog id="onboarding" aria-labelledby="onboarding-title"><div class="dialog-top"><span class="brand"><img src="assets/clearfood-icon.png" alt="" width="26" height="26">clear food.</span><button class="icon-button" data-close aria-label="Close onboarding">×</button></div><div class="progress-track" role="progressbar" aria-label="Onboarding progress" aria-valuemin="0" aria-valuemax="3" aria-valuenow="1"><span id="progress-fill"></span></div><div id="onboarding-content"></div><div class="dialog-bottom"><button id="onboarding-back" class="back-button">← Back</button><button id="onboarding-next" class="button-3d">Continue →</button></div><p class="preview-note">Onboarding preview · Your answers stay in this session.</p></dialog>
+<dialog id="waitlist" aria-labelledby="waitlist-title" aria-describedby="waitlist-description"><div class="dialog-top"><span class="waitlist-eyebrow">ANDROID · COMING SOON</span><button class="icon-button" data-close aria-label="Close waitlist">×</button></div><div id="waitlist-body"><h2 id="waitlist-title">Join the waitlist.</h2><p id="waitlist-description">Get <strong>1 month free</strong> when Android launches.</p><form id="waitlist-form"><label class="sr-only" for="email">Your email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required maxlength="254"><label class="consent"><input name="consent" type="checkbox" required><span>Email me at launch. <a href="/privacy-policy">Privacy policy</a></span></label><button type="submit" class="waitlist-submit">Save my spot <span aria-hidden="true">→</span></button></form><p class="waitlist-demo">Design preview · No data saved or sent.</p></div></dialog>
+</body></html>
 
-  <!-- More sections (features, cause, CTA) come back once the App Store link is live -->
 
-  <footer>
-    <div class="wrap footer-top">
-      <div class="footer-brand">
-        <a href="#" class="logo">
-          <img src="assets/icon-default-1024.png" alt="" />
-          Clear Food
-        </a>
-        <p>Download Clear Food</p>
-        <a href="https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653" class="badge-link" data-hold-link aria-label="Download Clear Food. Press and hold to open.">
-          <img class="badge-img small" src="assets/app-store-badge.webp" alt="Download on the App Store" />
-          <span class="badge-hint">Hold to open</span>
-        </a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="https://ballymaybach.github.io/realfood-legal/privacy.html">Privacy Policy</a>
-        <a href="https://ballymaybach.github.io/realfood-legal/terms.html">Terms of Use</a>
-      </div>
-    </div>
-    <div class="wrap footer-bottom">
-      <div class="footer-copy">© 2026 Clear Food. All rights reserved.</div>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>

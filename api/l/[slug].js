@@ -8,7 +8,7 @@ const path = require("path");
 const { kv } = require("../_kv");
 
 const SLUG_RE = /^[a-z0-9-]{1,40}$/;
-const RESERVED = new Set(["admin", "api", "assets", "favicon.ico", "robots.txt", "index.html"]);
+const RESERVED = new Set(["admin", "api", "assets", "favicon.ico", "robots.txt", "index.html", "privacy-policy", "terms", "content"]);
 
 module.exports = async (req, res) => {
   const slug = String(req.query.slug || "").toLowerCase();

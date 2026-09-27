@@ -12,10 +12,10 @@ function trackDownloadClick() {
   }
 }
 
-document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (link) {
-  if (!link.hasAttribute("data-hold-link")) {
-    link.addEventListener("click", trackDownloadClick);
-  }
+// Delegated so links rendered later (onboarding result) are counted too.
+document.addEventListener("click", function (e) {
+  var link = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+  if (link && !link.hasAttribute("data-hold-link")) trackDownloadClick();
 });
 
 // "Hold to open" row — a normal tap/click navigates like any link.
