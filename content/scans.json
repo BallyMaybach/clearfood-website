@@ -1,0 +1,960 @@
+{
+  "milk": {
+    "input": "A glass of cow milk, 3.5% fat, 250 ml",
+    "score": 79,
+    "goals": {
+      "clear_skin": 75,
+      "body_fat": 80,
+      "build_muscle": 90,
+      "less_bloat": 70
+    },
+    "macros": {
+      "cal": 158,
+      "protein": 8,
+      "carbs": 12,
+      "sugar": 12,
+      "fat": 8
+    },
+    "servingGrams": 250,
+    "servingUnit": "ml",
+    "why": {
+      "en": [
+        "Milk is a good source of protein for muscle building and satiety.",
+        "It provides essential vitamins and minerals like calcium and vitamin D for bone health.",
+        "A naturally occurring food, it is minimally processed."
+      ],
+      "de": [
+        "Milch ist eine hervorragende Quelle für hochwertiges Protein, wichtig für Muskelaufbau und -erhalt.",
+        "Sie liefert Kalzium und Vitamin D, die für gesunde Knochen unerlässlich sind.",
+        "Milch enthält eine gute Mischung aus Makronährstoffen und wichtigen Mikronährstoffen."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "The fat content is 3.5%, which contributes to the calorie count.",
+        "Some individuals may experience bloating due to lactose intolerance.",
+        "Sugars are naturally occurring lactose, which can be high for some dietary approaches."
+      ],
+      "de": [
+        "Laktoseintoleranz kann bei manchen Personen zu Verdauungsproblemen wie Blähungen führen.",
+        "Der Fettgehalt von 3.5% kann bei übermäßigem Konsum zu einer erhöhten Kalorienaufnahme beitragen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "A glass of unsweetened almond drink, 250 ml",
+      "score": 73,
+      "goals": {
+        "clear_skin": 70,
+        "body_fat": 80,
+        "build_muscle": 65,
+        "less_bloat": 75
+      },
+      "macros": {
+        "cal": 30,
+        "protein": 1,
+        "carbs": 1,
+        "sugar": 0,
+        "fat": 2
+      },
+      "servingGrams": 250,
+      "servingUnit": "ml",
+      "why": {
+        "en": [
+          "Low in calories and sugar.",
+          "A good dairy-free alternative.",
+          "Can contribute to hydration."
+        ],
+        "de": [
+          "Niedriger Kaloriengehalt.",
+          "Praktisch zuckerfrei.",
+          "Kann eine gute Milchalternative sein."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "Very low in protein, not suitable as a primary protein source.",
+          "May contain additives like emulsifiers or thickeners.",
+          "Lacks the diverse micronutrients found in dairy milk."
+        ],
+        "de": [
+          "Sehr wenig Protein.",
+          "Geringer Nährstoffgehalt im Vergleich zu Kuhmilch.",
+          "Kann Verdickungsmittel enthalten, die bei manchen Menschen Blähungen verursachen können."
+        ]
+      }
+    }
+  },
+  "milk-chocolate": {
+    "input": "Milk chocolate bar, 50 g",
+    "score": 29,
+    "goals": {
+      "clear_skin": 25,
+      "body_fat": 20,
+      "build_muscle": 30,
+      "less_bloat": 40
+    },
+    "macros": {
+      "cal": 265,
+      "protein": 3,
+      "carbs": 29,
+      "sugar": 27,
+      "fat": 16
+    },
+    "servingGrams": 50,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "Can provide a quick energy boost.",
+        "Contains some beneficial antioxidants from cocoa.",
+        "Offers a comforting and enjoyable treat in moderation."
+      ],
+      "de": [
+        "Kann eine schnelle Energiequelle sein.",
+        "Enthält kleine Mengen an Mineralien."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "High in calories, which can contribute to weight gain if overconsumed.",
+        "Very high in added sugar (27g), which can negatively impact clear skin and body fat goals.",
+        "Contains a significant amount of fat (16g), including saturated fat."
+      ],
+      "de": [
+        "Sehr hoher Zuckergehalt von 28g pro Portion.",
+        "Hoher Kalorien- und Fettgehalt bei 265 kcal und 16g Fett.",
+        "Bietet wenig Sättigung und kann zu übermäßigem Verzehr führen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Dark chocolate 85% cocoa, 20 g",
+      "score": 68,
+      "goals": {
+        "clear_skin": 70,
+        "body_fat": 65,
+        "build_muscle": 60,
+        "less_bloat": 75
+      },
+      "macros": {
+        "cal": 114,
+        "protein": 1,
+        "carbs": 6,
+        "sugar": 3,
+        "fat": 11
+      },
+      "servingGrams": 20,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "Rich in antioxidants and beneficial flavonoids.",
+          "Contains fiber, supporting digestive health.",
+          "Relatively low in sugar compared to other chocolates."
+        ],
+        "de": [
+          "Dunkle Schokolade mit hohem Kakaoanteil ist reich an Antioxidantien.",
+          "Sie kann zur Verbesserung der Herzgesundheit beitragen.",
+          "Ein kleiner Genuss kann die Stimmung positiv beeinflussen."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "High in calories and fat, so portion control is important.",
+          "Could contribute to caffeine sensitivity in some individuals."
+        ],
+        "de": [
+          "Der Fettgehalt ist mit 11g pro Portion relativ hoch.",
+          "Obwohl der Zuckergehalt moderat ist, sollte man den Konsum im Auge behalten.",
+          "Die Kaloriendichte ist mit 114 kcal für 20g hoch."
+        ]
+      }
+    }
+  },
+  "whey-protein": {
+    "input": "Whey protein shake, 30 g powder mixed with 300 ml water",
+    "score": 85,
+    "goals": {
+      "clear_skin": 75,
+      "body_fat": 90,
+      "build_muscle": 95,
+      "less_bloat": 80
+    },
+    "macros": {
+      "cal": 120,
+      "protein": 24,
+      "carbs": 3,
+      "sugar": 1,
+      "fat": 2
+    },
+    "servingGrams": 330,
+    "servingUnit": "ml",
+    "why": {
+      "en": [
+        "Excellent source of high-quality protein, essential for muscle repair and growth.",
+        "Very low in sugar and fat, supporting lean body mass goals.",
+        "Convenient way to increase protein intake without adding many calories."
+      ],
+      "de": [
+        "Reich an hochwertigem Protein, das den Muskelaufbau und die Reparatur unterstützt.",
+        "Niedriger Gehalt an Zucker und Fett, was es zu einer guten Option für die Gewichtskontrolle macht.",
+        "Bequem und leicht verdaulich, ideal nach dem Training oder als schnelle Proteinquelle."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "Some individuals may experience digestive issues from whey protein.",
+        "Ensure it fits within your overall daily calorie and macro targets.",
+        "Not a replacement for whole food meals, should be used as a supplement."
+      ],
+      "de": [
+        "Kann bei empfindlichen Personen zu Blähungen führen, insbesondere bei Laktoseintoleranz.",
+        "Einige Proteinpulver enthalten künstliche Süßstoffe oder Zusatzstoffe, die vermieden werden sollten.",
+        "Nicht als vollständiger Mahlzeitenersatz geeignet, sollte Teil einer ausgewogenen Ernährung sein."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Plain skyr, 250 g",
+      "score": 88,
+      "goals": {
+        "clear_skin": 90,
+        "body_fat": 85,
+        "build_muscle": 95,
+        "less_bloat": 80
+      },
+      "macros": {
+        "cal": 163,
+        "protein": 28,
+        "carbs": 10,
+        "sugar": 10,
+        "fat": 0
+      },
+      "servingGrams": 250,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "Excellent source of protein (28g per serving) to support muscle building and satiety.",
+          "Very low in fat and calories, making it a great option for weight management.",
+          "Contains beneficial probiotics for gut health."
+        ],
+        "de": [
+          "Skyr ist reich an Protein, was den Muskelaufbau unterstützt und das Sättigungsgefühl fördert.",
+          "Es ist von Natur aus fettarm und zuckerfrei (natürlicher Milchzucker ist enthalten), was es zu einer guten Wahl für die Gewichtskontrolle macht.",
+          "Als fermentiertes Milchprodukt enthält Skyr Probiotika, die die Darmgesundheit unterstützen können."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "Contains lactose, which may cause digestive issues for individuals with intolerance.",
+          "Ensure it's truly plain to avoid added sugars often found in flavored versions."
+        ],
+        "de": [
+          "Personen mit Laktoseintoleranz könnten Verdauungsbeschwerden haben.",
+          "Achten Sie auf die Portionsgröße, um die Kalorienzufuhr im Rahmen zu halten."
+        ]
+      }
+    }
+  },
+  "energy-drink": {
+    "input": "Energy drink with sugar, one 500 ml can",
+    "score": 29,
+    "goals": {
+      "clear_skin": 20,
+      "body_fat": 30,
+      "build_muscle": 35,
+      "less_bloat": 30
+    },
+    "macros": {
+      "cal": 240,
+      "protein": 0,
+      "carbs": 60,
+      "sugar": 60,
+      "fat": 0
+    },
+    "servingGrams": 500,
+    "servingUnit": "ml",
+    "why": {
+      "en": [
+        "Can provide a quick burst of energy due to caffeine and sugar."
+      ],
+      "de": [
+        "Kann einen schnellen Energieschub liefern."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "High sugar content can lead to energy crashes and is not beneficial for overall health.",
+        "Excessive consumption of energy drinks can negatively impact sleep and heart health.",
+        "Provides minimal nutritional value beyond simple carbohydrates."
+      ],
+      "de": [
+        "Ein 500-ml-Getränk enthält 58 g Zucker, was über der empfohlenen Tagesdosis liegt.",
+        "Hoher Zuckergehalt kann zu Energieabstürzen und Hautproblemen führen.",
+        "Künstliche Süßstoffe und Zusatzstoffe können Verdauungsbeschwerden verursachen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Sparkling water with a slice of lemon, 500 ml",
+      "score": 94,
+      "goals": {
+        "clear_skin": 95,
+        "body_fat": 95,
+        "build_muscle": 90,
+        "less_bloat": 95
+      },
+      "macros": {
+        "cal": 5,
+        "protein": 0,
+        "carbs": 1,
+        "sugar": 0,
+        "fat": 0
+      },
+      "servingGrams": 500,
+      "servingUnit": "ml",
+      "why": {
+        "en": [
+          "Excellent for hydration without added sugars or artificial ingredients.",
+          "Contains virtually no calories, making it ideal for weight management.",
+          "Lemon adds a touch of flavor and natural antioxidants."
+        ],
+        "de": [
+          "Enthält praktisch keine Kalorien, Zucker oder Fett.",
+          "Hält den Körper hydriert.",
+          "Erfrischend und geschmacksintensiv ohne Zusatzstoffe."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "None to note for this product."
+        ],
+        "de": [
+          "Zu viel Sprudelwasser kann bei manchen Personen zu Blähungen führen."
+        ]
+      }
+    }
+  },
+  "cola": {
+    "input": "Regular cola with sugar, 500 ml bottle",
+    "score": 13,
+    "goals": {
+      "clear_skin": 10,
+      "body_fat": 10,
+      "build_muscle": 10,
+      "less_bloat": 20
+    },
+    "macros": {
+      "cal": 200,
+      "protein": 0,
+      "carbs": 54,
+      "sugar": 54,
+      "fat": 0
+    },
+    "servingGrams": 500,
+    "servingUnit": "ml",
+    "why": {
+      "en": [
+        "It provides quick energy due to its high sugar content."
+      ],
+      "de": [
+        "Erfrischend und kann schnell Energie liefern.",
+        "Enthält keine Fette oder Proteine."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "Regular cola is high in calories and sugar (54g per 500ml), offering little nutritional value.",
+        "Frequent consumption can contribute to weight gain and negatively impact metabolic health.",
+        "The high sugar content can contribute to skin issues and may cause bloating for some individuals."
+      ],
+      "de": [
+        "Sehr hoher Zuckergehalt von 52 g pro Flasche kann Blutzuckerspitzen verursachen.",
+        "Liefert hauptsächlich leere Kalorien ohne nennenswerte Nährstoffe.",
+        "Der hohe Zuckergehalt kann die Hautqualität beeinträchtigen und zur Gewichtszunahme beitragen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Cola zero sugar, 500 ml bottle",
+      "score": 30,
+      "goals": {
+        "clear_skin": 30,
+        "body_fat": 30,
+        "build_muscle": 30,
+        "less_bloat": 30
+      },
+      "macros": {
+        "cal": 0,
+        "protein": 0,
+        "carbs": 0,
+        "sugar": 0,
+        "fat": 0
+      },
+      "servingGrams": 500,
+      "servingUnit": "ml",
+      "why": {
+        "en": [
+          "It is calorie-free.",
+          "It is sugar-free."
+        ],
+        "de": [
+          "Es ist kalorienfrei und zuckerfrei, was es zu einer besseren Wahl als zuckerhaltige Limonaden macht.",
+          "Es trägt zur Flüssigkeitszufuhr bei."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "It contains artificial sweeteners, which some people prefer to avoid.",
+          "It offers no nutritional value."
+        ],
+        "de": [
+          "Enthält künstliche Süßstoffe, deren langfristige Auswirkungen auf die Gesundheit noch erforscht werden.",
+          "Der Konsum von kohlensäurehaltigen Getränken kann bei manchen Personen Blähungen verursachen.",
+          "Bietet keine Nährstoffe wie Vitamine oder Mineralien."
+        ]
+      }
+    }
+  },
+  "french-fries": {
+    "input": "Deep-fried french fries, medium portion 150 g",
+    "score": 28,
+    "goals": {
+      "clear_skin": 25,
+      "body_fat": 20,
+      "build_muscle": 30,
+      "less_bloat": 35
+    },
+    "macros": {
+      "cal": 465,
+      "protein": 5,
+      "carbs": 58,
+      "sugar": 0,
+      "fat": 24
+    },
+    "servingGrams": 150,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "Provides a quick source of energy from carbohydrates."
+      ],
+      "de": [
+        "Enthält eine moderate Menge an Kohlenhydraten, die schnelle Energie liefern können."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "Deep-frying makes them very high in calories, with 465 kcal for 150g.",
+        "Very high in fat (24g per 150g) from the frying oil, which can contribute to unwanted weight gain.",
+        "The high processing and frying can lead to inflammatory compounds not ideal for skin health."
+      ],
+      "de": [
+        "Sehr hoher Kaloriengehalt, der bei übermäßigem Verzehr zur Gewichtszunahme beitragen kann.",
+        "Hoher Fettgehalt, insbesondere aus dem Frittierprozess, was sich negativ auf die Herzgesundheit auswirken kann.",
+        "Tieffrittierte Lebensmittel und raffinierte Kohlenhydrate können bei manchen Personen zu Hautunreinheiten führen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Oven-roasted potatoes with a little olive oil, 200 g",
+      "score": 74,
+      "goals": {
+        "clear_skin": 70,
+        "body_fat": 70,
+        "build_muscle": 75,
+        "less_bloat": 80
+      },
+      "macros": {
+        "cal": 280,
+        "protein": 5,
+        "carbs": 40,
+        "sugar": 2,
+        "fat": 12
+      },
+      "servingGrams": 200,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "Potatoes are a good source of complex carbohydrates for energy.",
+          "They provide essential vitamins and minerals like Vitamin C and potassium.",
+          "Roasting with a little olive oil adds healthy monounsaturated fats."
+        ],
+        "de": [
+          "Kartoffeln liefern komplexe Kohlenhydrate für Energie und sind eine gute Quelle für Kalium und Vitamin C.",
+          "Olivenöl ist reich an gesunden einfach ungesättigten Fetten.",
+          "Die Ofenröstung ist eine schonende Zubereitungsart, die viele Nährstoffe erhält."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "The calorie count can be higher depending on the amount of oil used.",
+          "High consumption of starchy vegetables can impact blood sugar levels for some."
+        ],
+        "de": [
+          "Die Kalorien können bei größeren Portionen oder zu viel Olivenöl schnell ansteigen (240 kcal pro 200g).",
+          "Der Kohlenhydratgehalt ist mit 40g pro Portion relativ hoch.",
+          "Je nach Zubereitung und Menge des Öls kann der Fettgehalt variieren."
+        ]
+      }
+    }
+  },
+  "white-toast": {
+    "input": "Two slices of white toast bread",
+    "score": 30,
+    "goals": {
+      "clear_skin": 25,
+      "body_fat": 30,
+      "build_muscle": 35,
+      "less_bloat": 30
+    },
+    "macros": {
+      "cal": 130,
+      "protein": 4,
+      "carbs": 25,
+      "sugar": 2,
+      "fat": 1
+    },
+    "servingGrams": 50,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "Provides a quick source of energy.",
+        "Low in fat."
+      ],
+      "de": [
+        "Es kann eine schnelle Energiequelle sein."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "White bread is highly processed and low in fiber.",
+        "May cause blood sugar spikes due-to refined carbohydrates."
+      ],
+      "de": [
+        "Weißes Toastbrot ist stark verarbeitet und arm an Ballaststoffen.",
+        "Es hat einen hohen glykämischen Index, der den Blutzuckerspiegel schnell ansteigen lassen kann."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Two slices of wholegrain rye bread",
+      "score": 83,
+      "goals": {
+        "clear_skin": 80,
+        "body_fat": 85,
+        "build_muscle": 75,
+        "less_bloat": 90
+      },
+      "macros": {
+        "cal": 156,
+        "protein": 6,
+        "carbs": 29,
+        "sugar": 2,
+        "fat": 2
+      },
+      "servingGrams": 65,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "Excellent source of dietary fiber, promoting satiety and digestive health.",
+          "Provides complex carbohydrates for sustained energy release.",
+          "Lower glycemic index compared to white bread, helping manage blood sugar."
+        ],
+        "de": [
+          "Reich an Ballaststoffen, die die Verdauung fördern und ein Sättigungsgefühl erzeugen.",
+          "Vollkornroggenbrot hat einen niedrigen glykämischen Index, was zu einem stabileren Blutzuckerspiegel führt.",
+          "Enthält wichtige Mineralien wie Eisen und Magnesium."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "May contain gluten, which can cause discomfort for individuals with sensitivities."
+        ],
+        "de": [
+          "Roggenbrot kann für manche Menschen schwer verdaulich sein, insbesondere bei Glutenunverträglichkeit, obwohl Roggen weniger Gluten als Weizen enthält.",
+          "Obwohl ballaststoffreich, kann eine zu große Menge bei empfindlichen Personen Blähungen verursachen."
+        ]
+      }
+    }
+  },
+  "nutella": {
+    "input": "Nutella hazelnut spread, 2 tablespoons (30 g)",
+    "score": 28,
+    "goals": {
+      "clear_skin": 25,
+      "body_fat": 20,
+      "build_muscle": 30,
+      "less_bloat": 35
+    },
+    "macros": {
+      "cal": 160,
+      "protein": 2,
+      "carbs": 17,
+      "sugar": 17,
+      "fat": 9
+    },
+    "servingGrams": 30,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "A small amount of protein and fiber are present from hazelnuts and cocoa.",
+        "Provides a quick source of energy.",
+        "It's a widely enjoyed treat that can fit into an occasional balanced diet."
+      ],
+      "de": [
+        "Enthält Haselnüsse, die eine geringe Menge an Ballaststoffen und gesunden Fetten liefern.",
+        "Bietet einen schnellen Energieschub durch Zucker und Fett."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "Very high in sugar, with 17g per serving, contributing to empty calories.",
+        "High in fat, mostly from palm oil and vegetable oils.",
+        "Contains a high amount of calories for a small serving size (160 calories in 2 tablespoons)."
+      ],
+      "de": [
+        "Sehr hoher Zuckergehalt (17 g pro Portion), was sich negativ auf den Blutzuckerspiegel und die Haut auswirken kann.",
+        "Hoher Kalorien- und Fettgehalt (160 Kalorien und 9 g Fett pro Portion) kann zur Gewichtszunahme beitragen.",
+        "Hochverarbeitetes Lebensmittel mit Zucker als Hauptzutat."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Peanut butter made of 100% peanuts, 2 tablespoons (30 g)",
+      "score": 78,
+      "goals": {
+        "clear_skin": 75,
+        "body_fat": 70,
+        "build_muscle": 85,
+        "less_bloat": 80
+      },
+      "macros": {
+        "cal": 188,
+        "protein": 7,
+        "carbs": 6,
+        "sugar": 2,
+        "fat": 16
+      },
+      "servingGrams": 30,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "A good source of protein and healthy fats to keep you feeling full and satisfied.",
+          "Rich in various micronutrients, including vitamin E and magnesium.",
+          "Contains beneficial antioxidants."
+        ],
+        "de": [
+          "Reich an Protein und gesunden Fetten.",
+          "Enthält Ballaststoffe für eine gute Verdauung.",
+          "Besteht aus 100% Erdnüssen ohne Zusatzstoffe."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "It is calorie-dense; portion control is important.",
+          "Even 100% peanut butter can cause bloating for some individuals."
+        ],
+        "de": [
+          "Hoher Kalorien- und Fettgehalt, daher die Portionsgröße beachten.",
+          "Kann bei manchen Personen Blähungen verursachen.",
+          "Enthält Omega-6-Fettsäuren, auf ein ausgewogenes Verhältnis achten."
+        ]
+      }
+    }
+  },
+  "sugary-cereal": {
+    "input": "Frosted cornflakes with milk, bowl of 40 g cereal and 150 ml milk",
+    "score": 38,
+    "goals": {
+      "clear_skin": 35,
+      "body_fat": 30,
+      "build_muscle": 45,
+      "less_bloat": 40
+    },
+    "macros": {
+      "cal": 230,
+      "protein": 8,
+      "carbs": 47,
+      "sugar": 22,
+      "fat": 3
+    },
+    "servingGrams": 190,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "Provides some quick energy to start the day.",
+        "Contains some protein from the milk.",
+        "Fortified with essential vitamins and minerals."
+      ],
+      "de": [
+        "Liefert schnell verfügbare Energie.",
+        "Enthält etwas Protein aus der Milch.",
+        "Kann mit Ballaststoffen angereichert sein, je nach Sorte."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "High in added sugar from the frosted cornflakes, which can lead to energy crashes.",
+        "Low in fiber, which is important for digestive health and satiety.",
+        "Highly processed cereal offers limited nutritional density compared to whole grains."
+      ],
+      "de": [
+        "Sehr hoher Zuckergehalt durch die gezuckerten Cornflakes (22 g).",
+        "Geringer Proteingehalt im Verhältnis zu den Kohlenhydraten.",
+        "Stark verarbeitetes Getreideprodukt mit wenig Ballaststoffen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Oatmeal made with water, 50 g oats, topped with a handful of berries",
+      "score": 83,
+      "goals": {
+        "clear_skin": 80,
+        "body_fat": 85,
+        "build_muscle": 75,
+        "less_bloat": 90
+      },
+      "macros": {
+        "cal": 220,
+        "protein": 7,
+        "carbs": 40,
+        "sugar": 8,
+        "fat": 4
+      },
+      "servingGrams": 220,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "Excellent source of whole grains and dietary fiber from oats, supporting digestive health and satiety.",
+          "Berries provide a good amount of vitamins, minerals, and antioxidants.",
+          "Relatively low in calories and fat for a filling meal."
+        ],
+        "de": [
+          "Haferflocken sind eine gute Quelle für komplexe Kohlenhydrate und Ballaststoffe, die eine lang anhaltende Energie liefern.",
+          "Beeren enthalten viele Antioxidantien und Vitamine, die gut für die Haut und die allgemeine Gesundheit sind.",
+          "Die Kombination aus Haferflocken und Beeren sorgt für eine ausgewogene Mahlzeit mit guter Sättigung."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "While natural, berries contribute to the sugar content, which should be considered for very strict sugar goals.",
+          "Protein content is moderate; consider adding a protein source like nuts or seeds for increased muscle support."
+        ],
+        "de": [
+          "Ohne zusätzliche Proteinquellen kann der Proteingehalt für das Muskelwachstum begrenzt sein.",
+          "Der Zuckergehalt stammt hauptsächlich aus den Beeren und ist natürlich, aber größere Mengen können den Blutzucker beeinflussen."
+        ]
+      }
+    }
+  },
+  "gummy-bears": {
+    "input": "Gummy bears, 100 g bag",
+    "score": 13,
+    "goals": {
+      "clear_skin": 10,
+      "body_fat": 10,
+      "build_muscle": 10,
+      "less_bloat": 20
+    },
+    "macros": {
+      "cal": 330,
+      "protein": 7,
+      "carbs": 77,
+      "sugar": 59,
+      "fat": 0
+    },
+    "servingGrams": 100,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "A small amount can provide a quick energy boost.",
+        "Gelatin might offer some minor benefits for joint health."
+      ],
+      "de": [
+        "Ein kleiner Genuss für zwischendurch.",
+        "Praktisch für unterwegs."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "High in sugar, with 59g per 100g serving, contributing to empty calories.",
+        "May lead to blood sugar spikes and crashes.",
+        "Lack fiber and significant micronutrients."
+      ],
+      "de": [
+        "Sehr hoher Zuckergehalt (46 g pro 100 g) kann zu Energieabstürzen und Heißhunger führen.",
+        "Hoher Kaloriengehalt (330 kcal pro 100 g) bei geringem Sättigungsgefühl.",
+        "Fehlen von Ballaststoffen und hochwertigen Proteinen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Fresh mixed berries, 150 g",
+      "score": 90,
+      "goals": {
+        "clear_skin": 90,
+        "body_fat": 95,
+        "build_muscle": 85,
+        "less_bloat": 90
+      },
+      "macros": {
+        "cal": 85,
+        "protein": 1,
+        "carbs": 21,
+        "sugar": 14,
+        "fat": 1
+      },
+      "servingGrams": 150,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "Berries are rich in antioxidants, which can protect cells from damage.",
+          "They are a good source of fiber, supporting digestive health and satiety.",
+          "Naturally low in calories and fat, making them an excellent snack."
+        ],
+        "de": [
+          "Reich an Antioxidantien und Vitamin C, die zur Hautgesundheit beitragen.",
+          "Ballaststoffe fördern die Verdauung und können Blähungen reduzieren.",
+          "Niedriger Kaloriengehalt und hoher Wasseranteil unterstützen die Gewichtsregulierung."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "Despite being natural, berries contain sugar, so moderation is key for some diets.",
+          "Pesticide residues can sometimes be present, so washing thoroughly is recommended."
+        ],
+        "de": [
+          "Der Zuckergehalt kann bei größeren Portionen für bestimmte Diäten relevant sein.",
+          "Einige Personen können auf bestimmte Beeren empfindlich reagieren, was zu Verdauungsbeschwerden führen kann."
+        ]
+      }
+    }
+  },
+  "doner-kebab": {
+    "input": "Doner kebab in bread with salad and sauce",
+    "score": 54,
+    "goals": {
+      "clear_skin": 50,
+      "body_fat": 55,
+      "build_muscle": 65,
+      "less_bloat": 45
+    },
+    "macros": {
+      "cal": 680,
+      "protein": 45,
+      "carbs": 60,
+      "sugar": 8,
+      "fat": 30
+    },
+    "servingGrams": 400,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "Contains a good amount of protein from the meat.",
+        "Includes some vegetables from the salad, adding fiber and micronutrients.",
+        "Can be a satisfying and filling meal due to its size and macronutrient content."
+      ],
+      "de": [
+        "Döner Kebab liefert eine gute Menge Protein zum Muskelaufbau.",
+        "Das enthaltene Gemüse trägt zu Vitaminen und Ballaststoffen bei."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "Often high in calories and fat, which can contribute to excess calorie intake.",
+        "The bread is typically refined white flour, offering limited nutritional value.",
+        "Sauces can add significant amounts of sugar and unhealthy fats."
+      ],
+      "de": [
+        "Der Kaloriengehalt ist mit ca. 750 kcal pro Portion relativ hoch.",
+        "Der Fettgehalt ist mit 38 g pro Portion ebenfalls hoch, was zur Gewichtszunahme beitragen kann.",
+        "Das Brot kann zu einem schnellen Anstieg des Blutzuckerspiegels führen."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": {
+      "input": "Doner meat plate with salad, no bread, light yogurt sauce",
+      "score": 64,
+      "goals": {
+        "clear_skin": 60,
+        "body_fat": 65,
+        "build_muscle": 75,
+        "less_bloat": 55
+      },
+      "macros": {
+        "cal": 550,
+        "protein": 45,
+        "carbs": 20,
+        "sugar": 5,
+        "fat": 30
+      },
+      "servingGrams": 400,
+      "servingUnit": "g",
+      "why": {
+        "en": [
+          "Good source of protein for muscle building and satiety.",
+          "Includes a side salad for fiber and micronutrients.",
+          "No bread reduces refined carbohydrates."
+        ],
+        "de": [
+          "Hoher Proteingehalt vom Dönerfleisch unterstützt den Muskelerhalt und -aufbau.",
+          "Der Salat liefert Ballaststoffe und Mikronährstoffe.",
+          "Die Option ohne Brot und mit leichter Soße reduziert Kalorien und raffinierte Kohlenhydrate."
+        ]
+      },
+      "cautions": {
+        "en": [
+          "Doner meat can be high in saturated fat and sodium.",
+          "Yogurt sauce may contain added sugars and fats.",
+          "Portion sizes can vary, leading to higher calorie and fat intake."
+        ],
+        "de": [
+          "Der Fettgehalt kann insbesondere durch das Fleisch und die Joghurtsoße hoch sein, was die Kalorienzahl erhöht.",
+          "Die Qualität des Dönerfleisches kann variieren und teils stärker verarbeitet sein.",
+          "Manche Saucen können versteckten Zucker oder viel Salz enthalten."
+        ]
+      }
+    }
+  },
+  "eggs": {
+    "input": "Two boiled eggs",
+    "score": 90,
+    "goals": {
+      "clear_skin": 85,
+      "body_fat": 90,
+      "build_muscle": 95,
+      "less_bloat": 88
+    },
+    "macros": {
+      "cal": 155,
+      "protein": 13,
+      "carbs": 1,
+      "sugar": 1,
+      "fat": 11
+    },
+    "servingGrams": 100,
+    "servingUnit": "g",
+    "why": {
+      "en": [
+        "Excellent source of high-quality protein, essential for muscle repair and satiety.",
+        "Rich in various vitamins and minerals, including vitamin D, B12, and choline.",
+        "Contains healthy fats that contribute to overall health and nutrient absorption."
+      ],
+      "de": [
+        "Eier sind eine ausgezeichnete Quelle für hochwertiges Protein, das alle essentiellen Aminosäuren enthält.",
+        "Sie liefern wichtige Vitamine und Mineralstoffe wie Vitamin D, B12, Selen und Cholin.",
+        "Eier tragen aufgrund ihres Proteingehalts zur Sättigung bei und können das Gewichtsmanagement unterstützen."
+      ]
+    },
+    "cautions": {
+      "en": [
+        "Some individuals may need to monitor egg intake due to dietary preferences or specific health conditions."
+      ],
+      "de": [
+        "Einige Personen können empfindlich auf Eier reagieren oder eine Allergie haben.",
+        "Der Cholesteringehalt in Eiern ist für die meisten gesunden Menschen unbedenklich, sollte aber bei bestimmten Vorerkrankungen mit dem Arzt besprochen werden."
+      ]
+    },
+    "scannedAt": "2026-09-29",
+    "swap": null
+  }
+}

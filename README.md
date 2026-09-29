@@ -4,29 +4,21 @@ Marketing landing page for Clear Food (iOS food scanner). Plain HTML/CSS/JS — 
 
 ## Structure
 
-- `index.html` — the whole page (nav → hero → reviews → footer)
-- `styles.css` — design tokens mirror the app's light palette (`Clear-Food-App/lib/theme.js`); the reviews section deliberately breaks to the app's dark palette for contrast
-- `script.js` — hold-to-open interaction for the download CTAs (nav mobile + hero), no dependencies
-- `assets/` — real app icon + hero mockup already in place, see `assets/README.md`
+Most pages are **generated** — edit the source, then run `node scripts/build.mjs` (no install needed):
 
-App Store link is live: `https://apps.apple.com/de/app/clear-food-glowup-your-skin/id6779364653`. Reviews in the "What users say about us" section are real ASC customer reviews (verbatim, incl. typos) — refresh via `node scripts/asc.mjs GET /v1/apps/6779364653/customerReviews --all` in the Clear-Food-App repo if new ones come in.
+- `scripts/build.mjs` — homepage (EN `/`, DE `/de`), food pages (`/foods/*`, `/de/lebensmittel/*`), `/android`, `sitemap.xml`. Homepage copy lives at the top of this file.
+- `content/food-list.mjs` — which foods get a page and what is sent to the scan.
+- `content/food-copy.mjs` — the hand-written answer per food + sources (same list as the app's "Sources & science").
+- `content/scans.json` — real Clear Food scan results. `node scripts/scan-foods.mjs` scans foods that are missing (delete an entry to rescan).
+- `waitlist.js` — Android waitlist (Supabase `android_waitlist`), popup on normal pages, full screen on `/android`, EN/DE.
+- `app.js` — menu, FAQ, scroll-driven scan. `script.js` — referral click tracking + TikTok hold-to-open.
+- Hand-made, not generated: `privacy-policy/`, `terms/`, `admin.html`, `robots.txt`.
 
-## Still needed before launch
+**New food:** add it to `food-list.mjs`, run `scan-foods.mjs`, write its copy in `food-copy.mjs`, run `build.mjs`.
 
-- [ ] `assets/og-image.png` — 1200×630 social preview card
-- [ ] Final copy review (current copy is a first draft grounded in the app's actual features/thesis, not yet reviewed)
+## Links for bios
 
-## Local preview
-
-Just open `index.html` in a browser, or serve it:
-
-```bash
-npx serve .
-```
-
-## Deploy
-
-Push to GitHub, then import the repo in Vercel — no config needed, it's detected as a static site automatically. Point the `clearfood.app` domain at the Vercel project once purchased.
+`clearfood.app/download` — iPhone → App Store, Android → `/android`, everything else → homepage. Counted per platform in KV (`cf:download:ios|android|other`).
 
 ## Referral links + admin dashboard
 
