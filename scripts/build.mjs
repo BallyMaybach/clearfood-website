@@ -382,10 +382,6 @@ function androidPage() {
     <h1>Clear Food</h1>
     <p data-de="Sieh, was dein Essen mit deiner Haut macht">See what your food does to your skin</p>
   </header>
-  <div class="android-badges">
-    <a class="badge-apple" href="${APP}" target="_blank" rel="noopener"><img src="/assets/app-store-badge.webp" alt="Download on the App Store" width="162" height="48"></a>
-    <a class="badge-android" href="#waitlist" data-focus-email>${AND_SVG}<span><small data-de="BALD FÜR">COMING SOON</small>Android</span></a>
-  </div>
   <section id="waitlist" aria-live="polite"></section>
 </main>
 </body></html>

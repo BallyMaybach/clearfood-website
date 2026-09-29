@@ -127,8 +127,6 @@ function openWaitlist(){
 window.openWaitlist=openWaitlist;
 document.querySelectorAll('[data-waitlist]').forEach(button=>button.addEventListener('click',openWaitlist));
 if(isPage)openWaitlist();
-// "Coming soon · Android" badge on /android: jump to the form, not to a store.
-document.querySelectorAll('[data-focus-email]').forEach(el=>el.addEventListener('click',event=>{event.preventDefault();box.scrollIntoView({behavior:'smooth',block:'center'});box.querySelector('#email')?.focus({preventScroll:true});}));
 
 // Android visitors can't use the App Store — every "Get the app" opens the waitlist instead.
 if(!isPage&&/Android/i.test(navigator.userAgent)){

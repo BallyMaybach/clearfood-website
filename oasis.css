@@ -269,19 +269,11 @@ dialog{color:#17212e;background:linear-gradient(145deg,#fffffff5,#eff4f9f5);back
 .goal-bars i span{flex:1;position:relative;border-radius:2px;background:#ffffff17}
 .goal-bars i span::after{content:'';position:absolute;inset:0;border-radius:inherit;background:var(--bar,#3DAF7A);box-shadow:0 0 8px var(--bar,#3DAF7A);opacity:clamp(0,calc(var(--score) / 5 * var(--reveal) - var(--i)),1)}
 
-/* /android with branding: icon, name, one line, store badges, then the form */
+/* /android with branding: icon, name, one line, then the form */
 .android-wrap{width:min(400px,100%);display:flex;flex-direction:column;align-items:center;gap:22px;padding:16px 0}
 .android-brand{text-align:center;color:#fff}
 .android-logo{width:88px;height:88px;margin:0 auto 18px;filter:drop-shadow(0 14px 24px #0b203c55)}
 .android-brand h1{font-size:2.75rem;font-weight:650;letter-spacing:-.045em;line-height:1}
 .android-brand p{margin-top:10px;font-size:1rem;color:#dce7f4;line-height:1.5}
-.android-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.android-badges a{display:block;height:48px;transition:transform .15s}
-.android-badges a:active{transform:scale(.97)}
-.badge-apple img{height:48px;width:auto}
-.badge-android{display:flex!important;align-items:center;gap:9px;padding:0 16px 0 13px;border-radius:9px;background:#000;border:1px solid #a6a6a6;color:#fff}
-.badge-android svg{width:24px;height:24px;color:#3DDC84}
-.badge-android span{display:flex;flex-direction:column;line-height:1.05;font-size:1.25rem;font-weight:600;letter-spacing:-.01em}
-.badge-android small{font-size:.625rem;font-weight:500;letter-spacing:.06em}
 .android-page #waitlist{width:100%}
-@media(max-width:360px){.android-brand h1{font-size:2.25rem}.android-badges a,.badge-apple img{height:44px}}
+@media(max-width:360px){.android-brand h1{font-size:2.25rem}}
