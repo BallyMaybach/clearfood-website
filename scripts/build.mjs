@@ -21,6 +21,8 @@ const AND_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
 const STAR = '<svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5L2.6 9.4l6.5-.8z"/></svg>';
 const STARS = STAR.repeat(5);
 const GOAL_KEYS = ['clear_skin', 'body_fat', 'build_muscle', 'less_bloat'];
+// 20 segments per goal bar, each 5 points — lit ones glow (see .goal-bars in oasis.css).
+const SEGMENTS = Array.from({ length: 20 }, (_, i) => `<span style="--i:${i}"></span>`).join('');
 // Same thresholds as ratingColor() in the app (lib/rating.js).
 const ratingColor = (s) => (s >= 67 ? '#3DAF7A' : s >= 34 ? '#FFA63E' : '#E0605A');
 
@@ -201,7 +203,7 @@ function footer(lang, otherPath) {
 }
 
 const goalBars = (lang, goals, colored) =>
-  `<ul class="goal-bars">${GOAL_KEYS.map((k) => `<li style="--score:${goals[k]}${colored ? `;--bar:${ratingColor(goals[k])}` : ''}"><span>${L[lang].goals[k]}</span><i aria-hidden="true"><b></b></i><em>${goals[k]}</em></li>`).join('')}</ul>`;
+  `<ul class="goal-bars">${GOAL_KEYS.map((k) => `<li style="--score:${goals[k]}${colored ? `;--bar:${ratingColor(goals[k])}` : ''}"><span>${L[lang].goals[k]}</span><i aria-hidden="true">${SEGMENTS}</i><em>${goals[k]}</em></li>`).join('')}</ul>`;
 
 const ring = (score, label, colored) =>
   `<span class="score-ring" style="--score:${score}${colored ? `;--ring:${ratingColor(score)}` : ''}" role="img" aria-label="${esc(label)}"><svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-track" cx="32" cy="32" r="27" pathLength="100"/><circle class="ring-fill" cx="32" cy="32" r="27" pathLength="100"/></svg><b>${score}</b></span>`;
@@ -357,7 +359,7 @@ ${footer(lang, lang === 'en' ? L.de.foods : L.en.foods)}`;
 // visitor's browser via data-autolang, see waitlist.js.
 function androidPage() {
   return `<!doctype html>
-<html lang="en" data-autolang>
+<html lang="en" data-autolang data-title-de="Clear Food für Android – trag dich in die Warteliste ein">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -374,7 +376,18 @@ function androidPage() {
 <script src="/waitlist.js" defer></script>
 </head>
 <body class="android-page">
-<main id="waitlist" aria-live="polite"></main>
+<main class="android-wrap">
+  <header class="android-brand">
+    <img class="android-logo" src="/assets/app-icon-256.webp" alt="Clear Food app icon" width="88" height="88">
+    <h1>Clear Food</h1>
+    <p data-de="Sieh, was dein Essen mit deiner Haut macht">See what your food does to your skin</p>
+  </header>
+  <div class="android-badges">
+    <a class="badge-apple" href="${APP}" target="_blank" rel="noopener"><img src="/assets/app-store-badge.webp" alt="Download on the App Store" width="162" height="48"></a>
+    <a class="badge-android" href="#waitlist" data-focus-email>${AND_SVG}<span><small data-de="BALD FÜR">COMING SOON</small>Android</span></a>
+  </div>
+  <section id="waitlist" aria-live="polite"></section>
+</main>
 </body></html>
 `;
 }

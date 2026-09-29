@@ -16,7 +16,14 @@ const root=document.documentElement;
 const lang=root.dataset.autolang!==undefined
   ?((navigator.language||'').toLowerCase().startsWith('de')?'de':'en')
   :(root.lang==='de'?'de':'en');
-if(root.dataset.autolang!==undefined)root.lang=lang;
+if(root.dataset.autolang!==undefined){
+  root.lang=lang;
+  // Static text on /android carries its German version in data-de.
+  if(lang==='de'){
+    document.querySelectorAll('[data-de]').forEach(el=>{el.textContent=el.dataset.de;});
+    if(root.dataset.titleDe)document.title=root.dataset.titleDe;
+  }
+}
 
 const T={
   en:{
@@ -120,6 +127,8 @@ function openWaitlist(){
 window.openWaitlist=openWaitlist;
 document.querySelectorAll('[data-waitlist]').forEach(button=>button.addEventListener('click',openWaitlist));
 if(isPage)openWaitlist();
+// "Coming soon · Android" badge on /android: jump to the form, not to a store.
+document.querySelectorAll('[data-focus-email]').forEach(el=>el.addEventListener('click',event=>{event.preventDefault();box.scrollIntoView({behavior:'smooth',block:'center'});box.querySelector('#email')?.focus({preventScroll:true});}));
 
 // Android visitors can't use the App Store — every "Get the app" opens the waitlist instead.
 if(!isPage&&/Android/i.test(navigator.userAgent)){
