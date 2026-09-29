@@ -98,3 +98,104 @@ dialog{color:#17212e;background:linear-gradient(145deg,#fffffff5,#eff4f9f5);back
 #waitlist .wl-native{display:block;width:100%;margin-top:9px;background:none;border:1px solid #ffffff40;border-radius:99px;color:#fff;font-size:.8125rem;font-weight:500;min-height:40px}
 #waitlist .wl-reset{display:block;margin:12px auto 0;background:none;border:0;color:#cedeea;font-size:.6875rem;text-decoration:underline;text-underline-offset:3px;padding:6px}
 .is-android .store-actions a.ios{display:none}
+
+/* ── Relaunch 29.09.2026: rating, real scan, reviews ───────────────── */
+/* Hero rating replaces the old subtitle — same mono caps as before. */
+.rating{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto}
+.rating-stars{display:inline-flex;gap:7px}
+.rating-stars svg{width:19px;height:19px;fill:#fff}
+.rating-text{font-family:var(--mono);font-size:.75rem;letter-spacing:.19em;color:#f1f4fa}
+
+/* The real bowl is cropped tight (the old AI cutout had a margin built in),
+   so it sits smaller and lower, leaving the frame's top row free. */
+.food-showcase{margin-top:70px}
+.food-cutout{width:500px;height:500px;top:62px}
+
+/* Scan frame: product name left, score ring right */
+.product-label{align-items:center}
+.product-label .product-name{font-size:.9375rem;font-weight:600;letter-spacing:-.01em}
+.score-ring{position:relative;width:64px;height:64px;flex-shrink:0;display:grid;place-items:center}
+.score-ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);overflow:visible}
+.score-ring circle{fill:none;stroke-width:5}
+.ring-track{stroke:#ffffff2e}
+.ring-fill{stroke:#fff;stroke-linecap:round;stroke-dasharray:calc(var(--score) * var(--reveal)) 100;filter:drop-shadow(0 0 5px #b7ddff99)}
+.score-ring b{position:relative;font-size:1.3rem;font-weight:650;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+
+/* Right-hand copy, Oasis style: bold name, dot, plain sentences */
+.food-description{width:270px;top:230px}
+.food-description>p{font-size:1rem;line-height:1.65;color:#fff}
+.food-description .sample-label{font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.food-heading{width:260px}
+.food-heading h2{font-size:2.75rem}
+
+/* Goal bars — the app's four goals, segmented like the old scan meter */
+.goals-card{top:445px;padding:16px 18px 14px}
+.goal-bars{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:9px}
+.goal-bars li{display:grid;grid-template-columns:84px 1fr 26px;align-items:center;gap:12px;font-size:.75rem;color:#e3edf8}
+.goal-bars i{height:8px;border-radius:2px;background:#ffffff1a;overflow:hidden;-webkit-mask:repeating-linear-gradient(90deg,#000 0 calc(5% - 2px),transparent 0 5%);mask:repeating-linear-gradient(90deg,#000 0 calc(5% - 2px),transparent 0 5%)}
+.goal-bars b{display:block;height:100%;width:calc(var(--score) * 1% * var(--reveal));background:#76d0fa;box-shadow:0 0 8px #68c9ff80}
+.goal-bars em{font-style:normal;font-weight:600;text-align:right;font-variant-numeric:tabular-nums;color:#fff}
+
+/* Reviews — a wall of App Store cards */
+.reviews{max-width:1160px;padding-top:110px;padding-bottom:40px}
+.reviews-head{text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:44px}
+.reviews-head .rating-stars svg{width:22px;height:22px}
+.reviews-head h2{font-weight:450}
+.reviews-head p{color:#c7d8ed;font-size:.9375rem}
+.review-wall{columns:3 300px;column-gap:16px}
+.review{break-inside:avoid;margin:0 0 16px;padding:20px 20px 18px;border-radius:22px;border:1px solid #ffffff24;background:linear-gradient(145deg,#ffffff14,#ffffff05);box-shadow:inset 0 1px 1px #ffffff14}
+.review .rating-stars{gap:3px}
+.review .rating-stars svg{width:14px;height:14px;fill:#ffc95c}
+.review blockquote{margin:12px 0 14px}
+.review .review-title{font-weight:600;font-size:.9375rem;margin-bottom:6px}
+.review blockquote p{font-size:.9375rem;line-height:1.6;color:#dfe9f5;overflow-wrap:anywhere}
+.review figcaption{font-size:.75rem;color:#a9bfd9}
+.reviews-link{display:table;margin:14px auto 0;font-size:.875rem;border-bottom:1px solid #ffffff69;padding-bottom:5px}
+
+/* FAQ — heading on the left, answers on the right */
+.faq{padding-top:70px}
+.faq h2{font-size:2.75rem;font-weight:450}
+
+/* Footer: brand, one download button, legal */
+.footer-cta{display:inline-flex;align-items:center;gap:9px;background:#fff;color:#10233c;border-radius:100px;padding:11px 20px;font-size:.875rem;font-weight:600}
+.footer-cta svg{width:17px;height:18px}
+.footer-links{display:flex;gap:25px;align-items:center;font-size:.8125rem;color:#cfdeef}
+
+@media(max-width:760px){
+  .rating{gap:9px}
+  .rating-stars svg{width:17px;height:17px}
+  .rating-text{font-size:.6875rem;letter-spacing:.16em}
+  /* On phones the frame scrolls normally and the copy sits underneath it. */
+  .food-showcase{height:auto;margin-top:26px}
+  .showcase-sticky{position:relative;top:0;height:auto;padding-top:470px}
+  .product-glass{top:0;height:410px;width:calc(100% - 32px)}
+  .product-label{padding:16px 16px 0 20px}
+  .product-label .product-name{font-size:.875rem}
+  .score-ring{width:54px;height:54px}
+  .score-ring b{font-size:1.1rem}
+  .food-cutout{width:330px;height:330px;top:58px}
+  .goals-card{top:318px;width:calc(100% - 56px)}
+  .goal-bars li{grid-template-columns:74px 1fr 24px;gap:10px;font-size:.6875rem}
+  .food-heading,.food-description{position:static;opacity:1;transform:none;width:auto;margin:0 24px;text-align:left}
+  .food-heading{margin-top:28px}
+  .food-heading h2{font-size:1.75rem;line-height:1.2}
+  .food-description{margin-top:14px}
+  .food-description>p:first-child{display:block;font-size:.9375rem}
+  .food-description .sample-label{margin-top:10px;font-size:.625rem!important}
+  .scroll-caption{display:none}
+  .sky{background:linear-gradient(180deg,#4e5d75 0%,#4b6183 16%,#517099 26%,#7492bb 34%,#a6c0de 41%,#dbe8f6 47%,#a9c8ee 55%,#6fa7e0 64%,#4f8bc9 74%,#3d6494 88%,#2c456b 100%)}
+  .reviews{padding:80px 16px 24px}
+  .reviews-head{margin-bottom:28px;gap:12px}
+  .review-wall{columns:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 8px;scrollbar-width:none}
+  .review-wall::-webkit-scrollbar{display:none}
+  .review{flex:0 0 82%;margin:0;scroll-snap-align:center}
+  .faq{padding-top:56px}
+  .faq h2{font-size:2.25rem}
+  .footer{flex-direction:column;align-items:flex-start}
+  .footer-links{flex-wrap:wrap;gap:16px 22px;font-size:.75rem}
+}
+@media(prefers-reduced-motion:reduce){.food-showcase{--reveal:1!important}}
+/* The frame sits on the brightest band of the sky — white text vanishes there. */
+.product-label{color:var(--ink)}
+.ring-track{stroke:#14233722}
+.ring-fill{stroke:var(--ink);filter:none}

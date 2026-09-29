@@ -1,0 +1,9 @@
+# Search engines and AI search (Google, Bing, ChatGPT search, Perplexity, Claude)
+# may crawl the whole public site.
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /content
+
+Sitemap: https://www.clearfood.app/sitemap.xml
